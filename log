@@ -1,0 +1,139 @@
+  SYNC    include/config/auto.conf
+mkdir -p /home/rajesh/linux/tools/objtool && make O=/home/rajesh/linux subdir=tools/objtool --no-print-directory -C objtool 
+  INSTALL libsubcmd_headers
+  UPD     include/config/kernel.release
+  UPD     include/generated/utsrelease.h
+  CALL    scripts/checksyscalls.sh
+  CC      init/version.o
+  AR      init/built-in.a
+  CC      mm/memory.o
+  CC      fs/exec.o
+  CC      kernel/sys.o
+  CC      drivers/dma/sh/shdma-base.o
+  CC      drivers/tty/serial/8250/8250_tegra.o
+  AR      drivers/dma/sh/built-in.a
+  CC      drivers/dma/ti/edma.o
+  CC      fs/binfmt_elf.o
+  CC      drivers/char/hw_random/atmel-rng.o
+  CC      drivers/char/hw_random/geode-rng.o
+  AR      drivers/tty/serial/8250/built-in.a
+  AR      drivers/tty/serial/built-in.a
+  AR      drivers/tty/built-in.a
+  CC      drivers/char/hw_random/ixp4xx-rng.o
+  CC      drivers/dma/ti/omap-dma.o
+  CC      fs/compat_binfmt_elf.o
+  CC      drivers/char/hw_random/omap-rng.o
+  CC      kernel/module/main.o
+  CC      drivers/char/hw_random/omap3-rom-rng.o
+  CC      drivers/dma/ti/dma-crossbar.o
+  AR      mm/built-in.a
+  CC      drivers/char/hw_random/mxc-rnga.o
+  AR      drivers/dma/ti/built-in.a
+  AR      drivers/dma/built-in.a
+  CC      drivers/char/hw_random/imx-rngc.o
+  CC      drivers/char/hw_random/ingenic-rng.o
+  CC      drivers/base/firmware_loader/main.o
+  CC      drivers/char/hw_random/ingenic-trng.o
+  AR      kernel/module/built-in.a
+  CC      drivers/char/hw_random/nomadik-rng.o
+  CC      drivers/char/hw_random/hisi-rng.o
+  CC      drivers/char/hw_random/bcm2835-rng.o
+  AR      drivers/base/firmware_loader/built-in.a
+  CC      drivers/char/hw_random/iproc-rng200.o
+  AR      drivers/base/built-in.a
+  CC      drivers/char/hw_random/xgene-rng.o
+  CC      drivers/char/hw_random/stm32-rng.o
+  CC      drivers/char/hw_random/cn10k-rng.o
+  AR      drivers/char/hw_random/built-in.a
+  AR      drivers/char/built-in.a
+  CHK     kernel/kheaders_data.tar.xz
+  GEN     kernel/kheaders_data.tar.xz
+  AR      kernel/built-in.a
+  AR      drivers/net/ethernet/cirrus/built-in.a
+  AR      drivers/net/ethernet/faraday/built-in.a
+  AR      drivers/net/ethernet/freescale/enetc/built-in.a
+  AR      drivers/net/ethernet/freescale/built-in.a
+  AR      drivers/net/ethernet/hisilicon/built-in.a
+  CC      drivers/rtc/rtc-spear.o
+  CC      drivers/i2c/busses/i2c-brcmstb.o
+  AR      drivers/rtc/built-in.a
+  AR      fs/built-in.a
+  AR      drivers/i2c/busses/built-in.a
+  AR      drivers/i2c/built-in.a
+  AR      drivers/net/ethernet/sunplus/built-in.a
+  AR      drivers/net/ethernet/built-in.a
+  CC      drivers/ptp/ptp_dte.o
+  CC      drivers/watchdog/watchdog_core.o
+  AR      drivers/net/built-in.a
+  CC      drivers/ptp/ptp_qoriq.o
+  CC      drivers/watchdog/watchdog_dev.o
+  CC      drivers/watchdog/stm32_iwdg.o
+  CC      drivers/ptp/ptp_qoriq_debugfs.o
+  AR      drivers/ptp/built-in.a
+  CC      drivers/watchdog/marvell_gti_wdt.o
+  CC      drivers/leds/leds-ns2.o
+  AR      drivers/watchdog/built-in.a
+  AR      drivers/leds/built-in.a
+  CC [M]  drivers/perf/thunderx2_pmu.o
+  AR      drivers/built-in.a
+  CC [M]  kernel/kheaders.o
+  AR      built-in.a
+  AR      vmlinux.a
+  LD      vmlinux.o
+  OBJCOPY modules.builtin.modinfo
+  GEN     modules.builtin
+  MODPOST Module.symvers
+  CC      .vmlinux.export.o
+  CC [M]  kernel/kheaders.mod.o
+  CC [M]  fs/efivarfs/efivarfs.mod.o
+  CC [M]  drivers/thermal/intel/x86_pkg_temp_thermal.mod.o
+  CC [M]  drivers/perf/thunderx2_pmu.mod.o
+  CC [M]  net/netfilter/nf_log_syslog.mod.o
+  CC [M]  net/netfilter/xt_mark.mod.o
+  CC [M]  net/netfilter/xt_nat.mod.o
+  CC [M]  net/netfilter/xt_LOG.mod.o
+  CC [M]  net/netfilter/xt_MASQUERADE.mod.o
+  CC [M]  net/netfilter/xt_addrtype.mod.o
+  CC [M]  net/ipv4/netfilter/iptable_nat.mod.o
+  LD [M]  kernel/kheaders.ko
+  LD [M]  fs/efivarfs/efivarfs.ko
+  LD [M]  drivers/thermal/intel/x86_pkg_temp_thermal.ko
+  LD [M]  drivers/perf/thunderx2_pmu.ko
+  LD [M]  net/netfilter/nf_log_syslog.ko
+  LD [M]  net/netfilter/xt_mark.ko
+  LD [M]  net/netfilter/xt_nat.ko
+  UPD     include/generated/utsversion.h
+  CC      init/version-timestamp.o
+  LD [M]  net/netfilter/xt_addrtype.ko
+  LD [M]  net/netfilter/xt_LOG.ko
+  LD [M]  net/netfilter/xt_MASQUERADE.ko
+  LD [M]  net/ipv4/netfilter/iptable_nat.ko
+  LD      .tmp_vmlinux.kallsyms1
+  NM      .tmp_vmlinux.kallsyms1.syms
+  KSYMS   .tmp_vmlinux.kallsyms1.S
+  AS      .tmp_vmlinux.kallsyms1.o
+  LD      .tmp_vmlinux.kallsyms2
+  NM      .tmp_vmlinux.kallsyms2.syms
+  KSYMS   .tmp_vmlinux.kallsyms2.S
+  AS      .tmp_vmlinux.kallsyms2.o
+  LD      vmlinux
+  NM      System.map
+  SORTTAB vmlinux
+  RELOCS  arch/x86/boot/compressed/vmlinux.relocs
+  RSTRIP  vmlinux
+  CC      arch/x86/boot/version.o
+  VOFFSET arch/x86/boot/compressed/../voffset.h
+  OBJCOPY arch/x86/boot/compressed/vmlinux.bin
+  CC      arch/x86/boot/compressed/kaslr.o
+  GZIP    arch/x86/boot/compressed/vmlinux.bin.gz
+  CC      arch/x86/boot/compressed/misc.o
+  MKPIGGY arch/x86/boot/compressed/piggy.S
+  AS      arch/x86/boot/compressed/piggy.o
+  LD      arch/x86/boot/compressed/vmlinux
+  ZOFFSET arch/x86/boot/zoffset.h
+  OBJCOPY arch/x86/boot/vmlinux.bin
+  AS      arch/x86/boot/header.o
+  LD      arch/x86/boot/setup.elf
+  OBJCOPY arch/x86/boot/setup.bin
+  BUILD   arch/x86/boot/bzImage
+Kernel: arch/x86/boot/bzImage is ready  (#3)
